@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Menu - Kopi Nusantara</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f7f5f0;
+            color: #333333;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            background: #ffffff;
+            padding: 24px 30px;
+            border-radius: 10px;
+            border: 1px solid #e0d5c1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .header-title h2 {
+            color: #4e342e;
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        .header-title p {
+            color: #795548;
+            font-size: 14px;
+        }
+        .btn-add {
+            background-color: #4e342e;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            display: inline-block;
+        }
+        .btn-add:hover {
+            background-color: #3e2723;
+        }
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+        .card-stat {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0d5c1;
+        }
+        .card-stat h4 {
+            color: #8d6e63;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .card-stat .value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #4e342e;
+        }
+        .table-responsive {
+            background: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #e0d5c1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        thead {
+            background-color: #efebe9;
+        }
+        th {
+            padding: 14px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #4e342e;
+            border-bottom: 2px solid #d7ccc8;
+        }
+        td {
+            padding: 14px 18px;
+            font-size: 14px;
+            color: #4e342e;
+            border-bottom: 1px solid #f4efe6;
+            vertical-align: middle;
+        }
+        tbody tr:hover {
+            background-color: #faf8f5;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge-promo {
+            background-color: #ffebee;
+            color: #c62828;
+            border: 1px solid #ffcdd2;
+        }
+        .badge-reguler {
+            background-color: #f5f5f5;
+            color: #616161;
+            border: 1px solid #e0e0e0;
+        }
+        .action-links a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin-right: 12px;
+        }
+        .link-edit {
+            color: #1976d2;
+        }
+        .link-delete {
+            color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-section">
+            <div class="header-title">
+                <h2>Katalog Menu Kopi Nusantara</h2>
+                <p>Pengelolaan data harga, kategori sajian, dan program promo kafe</p>
+            </div>
+            <a href="tambah.php" class="btn-add">+ Tambah Menu Baru</a>
+        </div>
+
+        <div class="summary-cards">
+            <div class="card-stat">
+                <h4>Total Menu Terdaftar</h4>
+                <div class="value">0 Item</div>
+            </div>
+            <div class="card-stat">
+                <h4>Menu Dalam Promo (Diskon 10%)</h4>
+                <div class="value">0 Item</div>
+            </div>
+            <div class="card-stat">
+                <h4>Total Akumulasi Harga Menu</h4>
+                <div class="value">Rp 0</div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kode</th>
+                        <th>Nama Menu</th>
+                        <th>Kategori</th>
+                        <th>Harga Normal</th>
+                        <th>Status Promo</th>
+                        <th>Harga Akhir</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>CF-001</strong></td>
+                        <td>Espresso Single Origin Gayo</td>
+                        <td>Kopi</td>
+                        <td>Rp 25.000</td>
+                        <td><span class="badge badge-promo">Promo 10%</span></td>
+                        <td><strong>Rp 22.500</strong></td>
+                        <td class="action-links">
+                            <a href="edit.php?id=1" class="link-edit">Ubah</a>
+                            <a href="hapus.php?id=1" class="link-delete" onclick="return confirm('Hapus menu ini?')">Hapus</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>NC-002</strong></td>
+                        <td>Matcha Latte Signature</td>
+                        <td>Non-Kopi</td>
+                        <td>Rp 28.000</td>
+                        <td><span class="badge badge-reguler">Reguler</span></td>
+                        <td><strong>Rp 28.000</strong></td>
+                        <td class="action-links">
+                            <a href="edit.php?id=2" class="link-edit">Ubah</a>
+                            <a href="hapus.php?id=2" class="link-delete" onclick="return confirm('Hapus menu ini?')">Hapus</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
