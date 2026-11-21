@@ -93,10 +93,16 @@ Setiap modul baru yang ditambahkan ke repositori ini wajib mematuhi standar oper
    - Sebelum berkas modul dibuat, susun berkas rencana pada direktori `.plan/YYYY-MM-DD-<topik>.md`.
    - Lakukan tinjauan ruang lingkup materi, notasi, dan partisi latihan soal sebelum materi ajar final digenerasikan.
 
-2. **Standardisasi Latihan Soal**
-   - Latihan soal dipecah menjadi set terpisah yang fokus (misalnya: *Set 1: Konsep & Perhitungan Dasar*, *Set 2: Perhitungan Lanjutan/Kelompok*, *Set 3: Penerapan Kontekstual Santri*).
-   - Setiap set memuat tepat **20 soal** bernomor urut 1–20.
-   - Menggunakan instruksi umum di bagian atas set (tanpa petunjuk repetitif pada setiap nomor soal).
+2. **Standardisasi Latihan & Lembar Soal Evaluasi (Instruksi Terpusat Global)**
+   - **WAJIB INSTRUKSI GLOBAL PADA SUB-JUDUL**: DILARANG KERAS mengulang kalimat perintah/instruksi pada tiap-tiap butir nomor soal (seperti *"1. Tentukan nilai akhir..."*, *"2. Hitunglah..."*).
+   - Tuliskan perintah secara terpusat satu kali pada tajuk/sub-judul bagian, contoh:
+     `### A. Tentukan hasil akhir dan bentuk paling sederhana dari bilangan berpangkat berikut:`
+   - Setiap butir nomor soal wajib langsung menyajikan bentuk soal/ekspresi matematisnya secara bersih:
+     ```markdown
+     1. $$3^4 - 2^5 + 5^2$$
+     2. $$\frac{2^7 \times 2^4}{2^8}$$
+     ```
+   - Soal dikelompokkan terpartisi per topik fokus dengan nomor urut yang berurutan rapi.
 
 3. **Verifikasi Kepatuhan Syariah & Validitas KaTeX**
    - Pastikan seluruh studi kasus selaras dengan adab dan nuansa islami pesantren.
